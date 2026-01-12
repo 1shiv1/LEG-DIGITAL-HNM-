@@ -7498,6 +7498,32 @@
       </elementAttributes>
       <pos x="-3200" y="-960"/>
     </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>70</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>ALU</string>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>286</int>
+        </entry>
+        <entry>
+          <string>RectInside</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>165</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-6320" y="-3140"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
