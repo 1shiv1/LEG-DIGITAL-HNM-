@@ -1,0 +1,3 @@
+OP   ARGS (1-2 , left to right)
+00 - 000000 :IMMEDIATE - write 6 bit number directly to reg0
+01 - 000 000 :COPY - move the value in argument 1 to the value in argument 2. 
