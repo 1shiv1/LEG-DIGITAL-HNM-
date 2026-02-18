@@ -25868,8 +25868,13 @@
     </visualElement>
     <visualElement>
       <elementName>Clock</elementName>
-      <elementAttributes/>
-      <pos x="-24060" y="-4560"/>
+      <elementAttributes>
+        <entry>
+          <string>runRealTime</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-24120" y="-4560"/>
     </visualElement>
     <visualElement>
       <elementName>Rectangle</elementName>
@@ -27353,7 +27358,7 @@
         </entry>
         <entry>
           <string>delayTime</string>
-          <int>15</int>
+          <int>20</int>
         </entry>
       </elementAttributes>
       <pos x="-21960" y="-2520"/>
@@ -27374,7 +27379,7 @@
           <string>Delay to make sure CLK signal does not arrive before Data is updated, otherwwise registers will never save. Update according to slowest result bus path that involves registers.</string>
         </entry>
       </elementAttributes>
-      <pos x="-20620" y="-2560"/>
+      <pos x="-20700" y="-2660"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -30616,6 +30621,59 @@
         </entry>
       </elementAttributes>
       <pos x="-6680" y="9120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NotConnected</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-6700" y="9120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NotConnected</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-6700" y="9560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NotConnected</elementName>
+      <elementAttributes/>
+      <pos x="-6700" y="9380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Delay</elementName>
+      <elementAttributes>
+        <entry>
+          <string>delayTime</string>
+          <int>10</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-24100" y="-4560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>15</int>
+        </entry>
+        <entry>
+          <string>textOrientation</string>
+          <de.neemann.digital.draw.graphics.Orientation>RIGHTBOTTOM</de.neemann.digital.draw.graphics.Orientation>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Replace delay with system that saves values on the next tick. A register will hold the to save register and value. Then, it will save on that +1 tick to a register, ensuring it arrives before the clock. Selected operands should check if that register is about to be updated, and if so take the new data instead of old.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-20940" y="-2580"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -37460,6 +37518,10 @@
       <p2 x="-24000" y="-4560"/>
     </wire>
     <wire>
+      <p1 x="-24120" y="-4560"/>
+      <p2 x="-24100" y="-4560"/>
+    </wire>
+    <wire>
       <p1 x="-25400" y="-4560"/>
       <p2 x="-25360" y="-4560"/>
     </wire>
@@ -42452,6 +42514,10 @@
       <p2 x="-6220" y="9120"/>
     </wire>
     <wire>
+      <p1 x="-6700" y="9120"/>
+      <p2 x="-6680" y="9120"/>
+    </wire>
+    <wire>
       <p1 x="-5640" y="9120"/>
       <p2 x="-5480" y="9120"/>
     </wire>
@@ -45116,7 +45182,7 @@
       <p2 x="-4620" y="9380"/>
     </wire>
     <wire>
-      <p1 x="-6680" y="9380"/>
+      <p1 x="-6700" y="9380"/>
       <p2 x="-6580" y="9380"/>
     </wire>
     <wire>
@@ -46866,6 +46932,10 @@
     <wire>
       <p1 x="-6660" y="9560"/>
       <p2 x="-6220" y="9560"/>
+    </wire>
+    <wire>
+      <p1 x="-6700" y="9560"/>
+      <p2 x="-6680" y="9560"/>
     </wire>
     <wire>
       <p1 x="-18400" y="-3420"/>
